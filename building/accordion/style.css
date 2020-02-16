@@ -1,0 +1,57 @@
+body, .jumbotron {
+  padding: 30px;
+}
+
+body {
+  background: #f9dbff;
+}
+
+.accordion {
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.question {
+  border-top: 1px solid #eee;
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.question h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #5d4fff;
+}
+
+.question .glyphicon {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+
+.answer p {
+  padding: 20px;
+}
+
+.accordion li.open .answer {
+  max-height: 150px;
+}
+
+.accordion li.open .glyphicon {
+  transform: rotate(180deg);
+}
+
+ul {
+  margin-bottom: 0;
+}
