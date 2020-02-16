@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Types and Variables</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+
+    <style>
+      body { padding: 30px; }
+    </style>
+    <!-- <script src="tester.js" charset="utf-8"></script> -->
+
+  </head>
+  <body>
+    <div class="dogs-list"></div>
+
+    <!-- start script -->
+    <script type="text/javascript">
+      // for loop
+      const dogsList = document.querySelector('.dogs-list');
+      const dogs = [
+        { name: "Wrigley", breed: "French Bulldog"},
+        { name: "Charlie", breed: "Pointer"}
+      ];
+
+      /* for (let i = 0; i < dogs.length; i++){
+        const dog = dogs[i];
+        const dogData = document.createElement('div');
+        dogData.classList.add("jumbotron", "text-center");
+        dogData.innerText = `${dog.name} is ${dog.breed}`;
+        dogsList.appendChild(dogData);
+      }; */
+
+      // for of iterator
+      for (dog of dogs){
+        const dogData = document.createElement('div');
+        dogData.classList.add("jumbotron", "text-center");
+        dogData.innerText = `${dog.name} is ${dog.breed}`;
+        dogsList.appendChild(dogData);
+      }
+
+
+    </script>
+
+  </body>
+</html>

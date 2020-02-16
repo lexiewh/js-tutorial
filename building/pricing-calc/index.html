@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pricing Calculator</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+
+    <div class="jumbotron">
+    <h2>How much do pies cost?</h2>
+
+    <form>
+
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" name="price" value="20">
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">
+          Quantity
+          <span class="label label-primary quantity-label">1</span>
+        </label>
+        <input type="range" class="form-control" name="quantity" value="1" min="1" max="10" step="1">
+      </div>
+
+    </form>
+
+    <div class="text-right text-giant total"></div>
+
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>

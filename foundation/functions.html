@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Functions</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+
+    <style>
+      body { padding: 30px; }
+    </style>
+
+    <!-- <script src="tester.js" charset="utf-8"></script> -->
+
+  </head>
+  <body>
+    <div class="jumbotron text-center">
+      <button type="button" class="btn btn-danger" onclick="cubed(8)">
+        My Button
+      </button>
+    </div>
+
+    <!-- start script -->
+    <script type="text/javascript">
+      const squared = function(a) {
+        console.log(a*a);
+      }
+
+      const cubed = (a) => {
+        console.log(a*a*a);
+      }
+
+      // cubed and squared mean the same, just with different syntax
+
+      // hoisting -> js can read functions out of order, you can call a func before
+      // actually declaring it. This does not work as a func saved as a const.
+
+    </script>
+
+  </body>
+</html>

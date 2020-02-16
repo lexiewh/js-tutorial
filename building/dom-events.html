@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Functions</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+
+    <style>
+      body { padding: 30px; }
+    </style>
+
+  </head>
+  <body>
+
+    <!-- OPTION 1 -->
+    <div class="jumbotron text-center">
+      <button type="button" class="btn btn-primary" onclick="changeColor()">
+        Option 1
+      </button>
+    </div>
+
+    <!-- OPTION 2 -->
+    <div class="jumbotron text-center">
+      <button type="button" class="btn btn-primary coffee-btn" onclick="changeColor()">
+        Option 2
+      </button>
+    </div>
+
+    <div class="jumbotron text-center">
+      <button type="button" class="btn btn-primary triple-btn" onclick="changeColor()">
+        Triple
+      </button>
+      <button type="button" class="btn btn-primary triple-btn" onclick="changeColor()">
+        Triple
+      </button>
+      <button type="button" class="btn btn-primary triple-btn" onclick="changeColor()">
+        Triple
+      </button>
+    </div>
+
+    <!-- OPTION 3 -->
+    <div class="jumbotron text-center">
+      <button type="button" class="btn btn-primary better-btn">
+        Not Listening
+      </button>
+    </div>
+
+
+    <!-- start script -->
+    <script type="text/javascript">
+      // 1: grab elements from the dom
+      // 2: attach event listeners
+
+      // OPTION 1
+      function changeColor(){
+        const body = document.querySelector('body');
+        body.style.backgroundColor = '#f4bee3';
+      }
+
+      // OPTION 2
+      const coffee = document.querySelector('.coffee-btn');
+      coffee.onclick = function() {
+        document.body.style.backgroundColor = '#9abbdd';
+      }
+
+      coffee.onmouseenter = changeColor;
+
+      // query select all example
+      const tripleBtns = document.querySelectorAll('.triple-btn')
+
+      function getYellow() {
+        document.body.style.backgroundColor = '#fae06f';
+      }
+
+      tripleBtns.forEach(function(button) {
+        button.onclick = getYellow;
+      });
+
+      // OPTION 3 (THE BEST)
+      const bestBtn = document.querySelector('.better-btn');
+
+      function notListening() {
+        document.body.style.backgroundColor = '#c28cf7';
+      }
+
+      bestBtn.addEventListener('click', notListening);
+
+      const buttons = document.querySelectorAll('button');
+
+      buttons.forEach(button => button.addEventListener("mouseleave", getYellow));
+
+    </script>
+
+  </body>
+</html>
