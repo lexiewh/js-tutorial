@@ -1,0 +1,23 @@
+body, .jumbotron {
+  padding: 30px;
+}
+
+.content {
+  background: #fff;
+  padding: 50px;
+  font-size: 19px;
+  line-height: 1.5;
+  min-height: 3000px;
+}
+
+body {
+  background: #EDEDED;
+}
+
+.scroll-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 9px;
+  background: #49607A;
+}
